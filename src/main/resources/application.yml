@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+      context-path: /students/api
+      jsp:
+        registered: false
+  error:
+    whitelabel: 
+      enabled: false
+    
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/students?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CET
+    username: root
+    password: Pierrebing59
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+       ddl-auto: create
+    properties: 
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
